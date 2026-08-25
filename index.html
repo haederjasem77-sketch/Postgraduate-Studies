@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>بروشور المؤتمر</title>
+<title>الدراسات العليا</title>
 <!-- مكتبة التقليب الورقي التفاعلي -->
 <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.js"></script>
 <style>
@@ -133,18 +133,17 @@ animation: fadeOut 3.5s forwards ease-in-out;
 <!-- شريط تحكم شفاف أسفل الصورة -->
 <div class="bottom-bar">
 <button class="nav-arrow" id="btnNext" title="التالي">‹</button>
-<span class="page-status" id="pageNumber">1 / 6</span>
+<span class="page-status" id="pageNumber">1 / 5</span>
 <button class="nav-arrow" id="btnPrev" title="السابق">›</button>
 </div>
 
-<!-- الصفحات الورقية -->
+<!-- الصفحات الورقية (5 صفحات بصيغة PNG) -->
 <div id="flipbook">
-<div class="page" data-density="soft"><img src="1.jpg" alt="الصفحة 1"></div>
-<div class="page" data-density="soft"><img src="2.jpg" alt="الصفحة 2"></div>
-<div class="page" data-density="soft"><img src="3.jpg" alt="الصفحة 3"></div>
-<div class="page" data-density="soft"><img src="4.jpg" alt="الصفحة 4"></div>
-<div class="page" data-density="soft"><img src="5.jpg" alt="الصفحة 5"></div>
-<div class="page" data-density="soft"><img src="6.jpg" alt="الصفحة 6"></div>
+<div class="page" data-density="soft"><img src="1.png" alt="الصفحة 1"></div>
+<div class="page" data-density="soft"><img src="2.png" alt="الصفحة 2"></div>
+<div class="page" data-density="soft"><img src="3.png" alt="الصفحة 3"></div>
+<div class="page" data-density="soft"><img src="4.png" alt="الصفحة 4"></div>
+<div class="page" data-density="soft"><img src="5.png" alt="الصفحة 5"></div>
 </div>
 </div>
 
@@ -152,10 +151,10 @@ animation: fadeOut 3.5s forwards ease-in-out;
 window.addEventListener('DOMContentLoaded', () => {
 const screenW = window.innerWidth;
 const screenH = window.innerHeight;
-const total = 6;
+const total = 5; // تم الضبط على 5 صفحات
 const bookContainer = document.getElementById('flipbook');
 
-// استدعاء ملف الصوت الجديد
+// استدعاء ملف الصوت
 const flipSound = new Audio('flip.mp3');
 flipSound.volume = 0.6;
 flipSound.preload = 'auto';
